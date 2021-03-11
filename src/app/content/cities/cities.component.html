@@ -1,0 +1,19 @@
+<div class="row">
+    <div class="col-lg-12 justify-content-center">
+            <app-custom-card 
+            [services]="dataList" 
+            [mensaje]="'Este es un mensaje'"
+            [cardWidth]="'180'"
+                (selectedCard)="getSelectedCardItem($event)">
+            </app-custom-card>
+    </div>
+</div>
+
+<div *ngIf="valueCard">
+    <div class="card" > 
+        <div class="card-body">
+            <h5>{{valueCard.title}}</h5>
+            <p>{{valueCard.description}}</p>
+        </div>
+    </div>
+</div>

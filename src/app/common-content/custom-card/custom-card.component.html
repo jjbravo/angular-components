@@ -1,0 +1,11 @@
+<div class="card custom-card" [ngStyle]="{'max-width.px': cardWidth}" *ngFor="let item of services">
+    <img [src]="item.image" class="card-img-top airbnb-img" alt="">
+    <div class="card-body" >
+        <p>{{mensaje}}</p>
+        <h5 class="card-title">{{item.title}}</h5>
+        <p >
+            {{item.description}}
+        </p>
+        <button type="button" class="btn btn-primary btn-block" (click)="selectedCardItem(item)" >Selected</button>
+    </div>
+</div>
